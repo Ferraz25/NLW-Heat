@@ -21,44 +21,66 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="images/avatar.jpg" alt="Foto pessoal" />
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
         </div>
 
-        <h1>João Victor</h1>
-        <a href="https://www.instagram.com/victorferraz54/">
+        <h1 id="userName">Mayk Brito</h1>
+        <a href="https://github.com/Ferraz25" target="_blank">
           <img src="images/github.svg" alt="Ícone github" />
-          Ferraz25</a
+          maykbrito</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com" target="_blank">
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/maykbrito" target="_blank">
               <img src="images/youtube.svg" alt="Ícone Youtube" />
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.facebook.com/joaovictor.victor.378/"
-              target="_blank"
-            >
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito" target="_blank">
               <img src="images/facebook.svg" alt="Ícone Facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/victorferraz54/" target="_blank">
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
               <img src="images/instagram.svg" alt="Ícone Instagram" />
             </a>
           </li>
 
-          <li>
-            <a href="https://twitter.com/Joaovictormac" target="_blank">
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
               <img src="images/twitter.svg" alt="Ícone Twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      const linksSocialMedia = {
+        github: 'Ferraz25',
+        youtube: 'UC-OtmUOtyPFKt88mIkEfzWA',
+        facebook: 'joaovictor.victor.378',
+        instagram: 'victorferraz54/',
+        twitter: 'Joaovictormac'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
