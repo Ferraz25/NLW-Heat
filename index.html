@@ -24,16 +24,19 @@
           <img
             src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
+            id="userImage"
           />
         </div>
 
         <h1 id="userName">Mayk Brito</h1>
-        <a href="https://github.com/Ferraz25" target="_blank">
+        <a id="userLink" href="https://github.com/Ferraz25" target="_blank">
           <img src="images/github.svg" alt="Ícone github" />
-          maykbrito</a
+          <span id="userLogin">maykbrito</span></a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -61,26 +64,6 @@
       </div>
     </main>
 
-    <script>
-      const linksSocialMedia = {
-        github: 'Ferraz25',
-        youtube: 'UC-OtmUOtyPFKt88mIkEfzWA',
-        facebook: 'joaovictor.victor.378',
-        instagram: 'victorferraz54/',
-        twitter: 'Joaovictormac'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
